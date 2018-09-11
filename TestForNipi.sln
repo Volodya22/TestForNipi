@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForNipi.Web", "TestForNipi.Web\TestForNipi.Web.csproj", "{845D59FD-E8D0-45C1-A902-5493ADC0AD85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{845D59FD-E8D0-45C1-A902-5493ADC0AD85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845D59FD-E8D0-45C1-A902-5493ADC0AD85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{845D59FD-E8D0-45C1-A902-5493ADC0AD85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{845D59FD-E8D0-45C1-A902-5493ADC0AD85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8B38D76-633C-4CE8-801A-5A88F684A1C4}
+	EndGlobalSection
+EndGlobal
