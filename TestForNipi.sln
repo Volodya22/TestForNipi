@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForNipi.Web", "TestForNipi.Web\TestForNipi.Web.csproj", "{845D59FD-E8D0-45C1-A902-5493ADC0AD85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForNipi.Core", "TestForNipi.Core\TestForNipi.Core.csproj", "{813FDF47-8577-4D32-BAE8-66BC052129FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForNipi.DataLayer", "TestForNipi.DataLayer\TestForNipi.DataLayer.csproj", "{65B8B91E-55D3-46FF-B3B8-5CCD447CEEB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{845D59FD-E8D0-45C1-A902-5493ADC0AD85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845D59FD-E8D0-45C1-A902-5493ADC0AD85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845D59FD-E8D0-45C1-A902-5493ADC0AD85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{813FDF47-8577-4D32-BAE8-66BC052129FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{813FDF47-8577-4D32-BAE8-66BC052129FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{813FDF47-8577-4D32-BAE8-66BC052129FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{813FDF47-8577-4D32-BAE8-66BC052129FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65B8B91E-55D3-46FF-B3B8-5CCD447CEEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65B8B91E-55D3-46FF-B3B8-5CCD447CEEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65B8B91E-55D3-46FF-B3B8-5CCD447CEEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65B8B91E-55D3-46FF-B3B8-5CCD447CEEB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

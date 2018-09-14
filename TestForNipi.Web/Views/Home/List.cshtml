@@ -1,0 +1,27 @@
+﻿@model IEnumerable<TestForNipi.Web.Models.DataViewModel>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <a class="btn btn-info" onclick="edit(@item.Id)">Edit</a> |
+                <a class="btn btn-default" onclick="details(@item.Id)">Details</a> |
+                <a class="btn btn-danger" onclick="showRegister(@item.Id)">Register</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

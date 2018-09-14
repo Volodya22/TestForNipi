@@ -1,0 +1,33 @@
+﻿@model IEnumerable<TestForNipi.Web.Models.DataViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sections</h2>
+
+<p>
+    <a class="btn btn-primary" onclick="add()">Create New</a>
+</p>
+
+<div id="main">
+    @{ Html.RenderPartial("List", Model); }
+</div>
+
+<div class="modal fade" id="main-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="addSection()" id="btn-add">Add</button>
+                <button type="button" class="btn btn-primary" onclick="editSection()" id="btn-save">Save</button>
+                <button type="button" class="btn btn-primary" onclick="register()" id="btn-reg">Register</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

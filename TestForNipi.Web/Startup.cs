@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using TestForNipi.Core.Models;
+using TestForNipi.DataLayer;
+using TestForNipi.Web.Models;
 
 namespace TestForNipi.Web
 {
@@ -26,6 +24,23 @@ namespace TestForNipi.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // setting infromation about database
+            var connection = Configuration["ConnectionString"];
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connection));
+
+            // creatin DI
+            services.AddScoped<IDbContext, AppDbContext>();
+
+            // setting automapper
+            services.AddAutoMapper();
+
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<City, DataViewModel>();
+                cfg.CreateMap<Location, DataViewModel>();
+                cfg.CreateMap<Section, DataViewModel>();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +56,16 @@ namespace TestForNipi.Web
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+            app.UseCookiePolicy();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
